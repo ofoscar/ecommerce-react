@@ -4,7 +4,9 @@
   "description": "Loud store",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch backend --exec babel-node backend/server.js"
+    "start": "nodemon --watch backend --exec babel-node backend/server.js",
+    "build": "rm -rf` with `rmdir /s /q",
+    "heroku-postbuild": "npm run build && cd frontend && npm install && npm run build"
   },
   "author": "Oscar Ramirez Angulo",
   "license": "ISC",
@@ -26,5 +28,9 @@
     "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "nodemon": "^2.0.4"
+  },
+  "engines": {
+    "node": "12.4.0",
+    "npm": "6.9.0"
   }
 }
